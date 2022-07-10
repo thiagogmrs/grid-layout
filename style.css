@@ -2,27 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
   body, ul, li, a{
     color: #fff;
     font-size: 1.25rem;
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     list-style: none;
-  }
+}
   body{
     height: 100%;
     width: 100%;
     background: #222222;
-  }
+}
   img{
     max-width: 100%;
     object-fit: cover;
-  }
+}
   .h-bg{
     background: black;
     margin-bottom: 20px;
-  }
+}
   .h-wrapper{
     display: flex;
     flex-wrap: wrap;
@@ -31,92 +31,168 @@
     max-width: 960px;
     margin: 0 auto;
     padding: 20px;
-  }
+}
   .h-logo a{
     font-size: 1.75rem;
-  }
+}
   .h-menu ul{
     display: flex;
     justify-content: center;
-  }
+}
   .h-menu ul li{
     padding: 15px;
-  }
+}
   .wrapper{
     max-width: 1200px;
     margin: 0 auto;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 20px;
     padding: 10px;
     margin-bottom: 30px;
-  }
-
-  .sidebar{
-    height: 100%;
-    width: 100%;
-    background: #fff;
+    padding: 15px;
+}
+ .sidebar{
     grid-column: 1/1;
     grid-row: 1/4;
+    height: 100%;
     border-radius: 10px;
-    min-width: 300px;
-    
- }
+    background: #555555;
+    min-width: 250px;
+    max-width: 100%;
+
+}
  .item{
     min-width: 200px;
     max-width: 400px;
- }
-  .item img{
+}
+.item img{
+    width: 100%;
     border-radius: 10px;
- }
+}
+ .um{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+ .dois{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+ .tres{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+ .quatro{
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+ .cinco{
+    grid-column: 2/3;
+    grid-row: 3/4;  
+}
+ .seis{
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
  .footer{
-    border-radius: 10px;
-    background: #fff;
+    grid-column: 1/4;
+    grid-row: 4/5;
     height: 200px;
     width: 100%;
-    grid-column: 1/4;
-    grid-row: 4/4;
-    min-width: 300px;
+    background: #555555;
+    border-radius: 10px;
+}
 
- }
-
- @media (max-width: 750px){
+@media (max-width: 780px){
     .wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 5px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        padding: 0px 20px;
         justify-content: center;
     }
     .sidebar{
-        display: none;
-        height: 100%;
-        width: 100%;
-        background: #fff;   
-        grid-column: 1/4;
+        grid-column: 1/3;
         grid-row: 1/1;
-        border-radius: 10px;
-        min-width: 300px;
-        
-     }
+        height: 200px;
+    }
+    .item{
+        min-width: 200px;
+        max-width: 100%;
+    }
+    .um{
+        grid-column: 1/2;
+        grid-row: 2/2;
+    }
+     .dois{
+        grid-column: 2/3;
+        grid-row: 2/2;
+    }
+     .tres{
+        grid-column: 1/2;
+        grid-row: 3/3;
+    }
+     .quatro{
+        grid-column: 2/3;
+        grid-row: 3/3;
+    }
+     .cinco{
+        grid-column: 1/2;
+        grid-row: 4/4;  
+    }
+     .seis{
+        grid-column: 2/3;
+        grid-row: 4/4;
+    }
      .footer{
-        display: none;
-     }
-     .item{
-        width: 100%;
-        height: 100%;
-        min-width: 300px;
-     }
- }
-
- @media (max-width: 440px){
+        grid-column: 1/3;
+        grid-row: 5/5;
+    }
+@media (max-width: 450px){
     .wrapper{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-gap: 5px;
-        justify-content: center;
+        grid-template-rows: repeat(1, 1fr);
     }
- }
+    .sidebar{
+        grid-column: 1/1;
+        grid-row: 1/1;
+        max-height: 100px;
+        margin-bottom: 20px;
+    }
+    .sidebar:nth-child(1){
+        /* max-height: 100px; */
+    }
+    .um{
+        grid-column: 1/1;
+        grid-row: 2/2;
+    }
+     .dois{
+        grid-column: 1/1;
+        grid-row: 3/3;
+    }
+     .tres{
+        grid-column: 1/1;
+        grid-row: 4/4;
+    }
+     .quatro{
+        grid-column: 1/1;
+        grid-row: 5/5;
+    }
+     .cinco{
+        grid-column: 1/1;
+        grid-row: 6/6;
+    }
+     .seis{
+        grid-column: 1/1;
+        grid-row: 7/7;
+    }
+     .footer{
+        grid-column: 1/1;
+        grid-row: 8/8;
+        height: 100px;
+    }
+}
