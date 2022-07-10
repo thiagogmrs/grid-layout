@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, ul, li, a{
+    color: #fff;
+    font-size: 1.25rem;
+    font-family: "Roboto";
+    text-decoration: none;
+    list-style: none;
+  }
+  body{
+    height: 100%;
+    width: 100%;
+    background: #222222;
+  }
+  img{
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .h-bg{
+    background: black;
+    margin-bottom: 20px;
+  }
+  .h-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .h-logo a{
+    font-size: 1.75rem;
+  }
+  .h-menu ul{
+    display: flex;
+    justify-content: center;
+  }
+  .h-menu ul li{
+    padding: 15px;
+  }
+  .wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  .sidebar{
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    grid-column: 1/1;
+    grid-row: 1/4;
+    border-radius: 10px;
+    min-width: 300px;
+    
+ }
+ .item{
+    min-width: 200px;
+    max-width: 400px;
+ }
+  .item img{
+    border-radius: 10px;
+ }
+ .footer{
+    border-radius: 10px;
+    background: #fff;
+    height: 200px;
+    width: 100%;
+    grid-column: 1/4;
+    grid-row: 4/4;
+    min-width: 300px;
+
+ }
+
+ @media (max-width: 750px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        justify-content: center;
+    }
+    .sidebar{
+        display: none;
+        height: 100%;
+        width: 100%;
+        background: #fff;   
+        grid-column: 1/4;
+        grid-row: 1/1;
+        border-radius: 10px;
+        min-width: 300px;
+        
+     }
+     .footer{
+        display: none;
+     }
+     .item{
+        width: 100%;
+        height: 100%;
+        min-width: 300px;
+     }
+ }
+
+ @media (max-width: 440px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        justify-content: center;
+    }
+ }
